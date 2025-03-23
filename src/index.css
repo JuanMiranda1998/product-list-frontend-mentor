@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url(./assets/fonts/static/RedHatText-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url(./assets/fonts/static/RedHatText-SemiBold.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url(./assets/fonts/static/RedHatText-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Red Hat Text';
+  src: url(./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf);
+  font-style: italic;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100lvw;
+  min-height: 100lvh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Red Hat Text';
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fcf9f7;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+input, button, textarea, select {
+  border: none;
+  outline: none;
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  line-height: 1.1;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+#root, #__next {
+  isolation: isolate;
+}
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
