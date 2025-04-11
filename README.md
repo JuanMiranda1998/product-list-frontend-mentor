@@ -32,6 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/JuanMiranda1998/product-list-frontend-mentor)
+- Live Site URL: [Netlify](https://product-list-juanmiranda.netlify.app/)
 
 ## My process
 
