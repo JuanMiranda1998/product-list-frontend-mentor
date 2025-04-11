@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useEffect, useState } from "react";
+import AddIcon, { MinusIcon } from "../utils/icons";
 
 const ProductCard = ({ productData, items }) => {
   const [isInCart, setIsInCart] = useState(false);
@@ -64,12 +65,16 @@ const ProductCard = ({ productData, items }) => {
         </div>
         {
           isInCart ?
-          <div className="w-56 lg:w-40 flex flex-row justify-between items-center text-[0.975rem] font-semibold text-[white] px-4 py-3 lg:px-3 lg:py-2 rounded-full -translate-y-5 bg-red" id={product.name}>
-              <button onClick={() => decreaseItemQuantity()} className="w-4 h-4 md:w-6 md:h-6 p-2 rounded-full border-2 border-solid border-[white] bg-[url(/icon-decrement-quantity.svg)] bg-no-repeat bg-[.75rem,.75rem] bg-center"></button>
+          <div className="w-56 lg:w-44 flex flex-row justify-between items-center text-[0.975rem] font-semibold text-[white] px-4 py-3 lg:px-3 rounded-full -translate-y-5 bg-red" id={product.name}>
+              <button onClick={() => decreaseItemQuantity()} className="cardButton w-6 h-6 flex justify-center items-center rounded-full object-contain border-2 border-solid border-[white] hover:bg-[white]">
+                <MinusIcon />
+              </button>
               {cartItems.find(item => item.id === product.id)?.quantity}
-              <button onClick={() => addItem()} className="w-4 h-4 md:w-6 md:h-6 p-2 rounded-full border-2 border-solid border-[white] bg-[url(/icon-increment-quantity.svg)] bg-no-repeat bg-[.75rem,.75rem] bg-center"></button>
+              <button onClick={() => addItem()} className="cardButton w-6 h-6 flex justify-center items-center rounded-full border-2 border-solid border-[white] hover:bg-[white]">
+                <AddIcon />
+              </button>
             </div> : (
-            <button onClick={() => addItem()} className="text-[0.975rem] font-semibold text-rose-900 px-7 py-3 border-solid border border-rose-500 rounded-full -translate-y-5 bg-[white]" id={product.name}>
+            <button onClick={() => addItem()} className="text-[0.975rem] font-semibold text-rose-900 px-7 py-3 border-solid border border-rose-500 rounded-full -translate-y-5 bg-[white] hover:border-red hover:text-red transition-colors ease-in duration-100" id={product.name}>
               <img className="inline mr-2 pointer-events-none" src="/icon-add-to-cart.svg" />
               Add to cart
             </button>

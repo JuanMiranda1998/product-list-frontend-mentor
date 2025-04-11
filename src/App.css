@@ -1,0 +1,7 @@
+.cardButton:hover .icon>path{
+  fill: #c73a0f;
+}
+
+.removeButton:hover .xIcon>path{
+  fill: #260f08;
+}

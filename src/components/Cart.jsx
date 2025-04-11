@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { RemoveItemIcon } from "../utils/icons";
 
 /* eslint-disable react/prop-types */
 const Cart = ({ items, submitFunc, total }) => {
@@ -41,7 +42,9 @@ const Cart = ({ items, submitFunc, total }) => {
               <p className=" text-rose-400">${(item.price*item.quantity).toFixed(2)}</p>
             </div>
           </div>
-          <button onClick={(e)=> removeItem(e)} className="flex justify-center items-center w-6 h-6 p-1 rounded-full border-2 border-solid border-rose-300 bg-[url(/icon-remove-item.svg)] bg-no-repeat bg-center" id={item.id}></button>
+          <button onClick={(e)=> removeItem(e)} className="removeButton flex justify-center items-center w-6 h-6 p-1 rounded-full border-2 border-solid border-rose-300 hover:border-rose-900" id={item.id}>
+            <RemoveItemIcon />
+          </button>
         </div>
         <div className="w-full h-[1px] rounded-full bg-rose-100 my-4" />
         </div>)}
